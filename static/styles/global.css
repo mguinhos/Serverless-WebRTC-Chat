@@ -1,0 +1,138 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+:root {
+    --color: black;
+    --background-color: white;
+    --border-color: whitesmoke;
+
+    --color-invert: white;
+    --background-color-invert: black;
+    --border-color-invert: gray;
+
+    --color-focus: black;
+    --background-color-focus: whitesmoke;
+    --border-color-focus: white;
+
+    --color-note: lightgrey;
+    --color-note-invert: gray;
+
+    --color-disabled: lightgrey;
+    --color-disabled-invert: gray;
+}
+
+[expand] {
+    width: 100%;
+}
+
+[note] {
+    color: var(--color-note);
+}
+
+.highlight-items *:hover {
+    background-color: var(--background-color-focus);
+}
+
+.center {
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    padding: 2mm;
+}
+
+.panel {
+    display: flex;
+    border: solid var(--border-color) 1px;
+    border-radius: 4mm;
+    padding: 1mm;
+    
+    box-shadow: 0 2px 4px  var(--border-color) inset;
+}
+
+button, input[type="button"] {
+    color: var(--color);
+    background-color: var(--background-color);
+    border: solid var(--border-color) 1px;
+    border-radius: 4mm;
+    transition: all 250ms;
+    padding: 2mm;
+    box-shadow: 0 2px 4px var(--border-color);
+}
+
+button:hover {
+    background-color: var(--background-color-focus);
+    border-color: var(--border-color-focus);
+    color: var(--color-focus);
+}
+
+button:active {
+    background-color: var(--background-color-invert);
+    border-color: var(--border-color-invert);
+    color: var(--color-invert);
+}
+
+button[disabled], button[disabled="true"] {
+    color: var(--color-disabled);
+}
+
+button[disabled]:active, button[disabled="true"]:active, button[disabled]:hover, button[disabled="true"]:hover {
+    color: var(--color-disabled);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+}
+
+input[type="text"], textarea {
+    font: inherit;
+    display: flex;
+    color: var(--color);
+    background-color: var(--background-color);
+    border: solid var(--border-color) 1px;
+    border-radius: 4mm;
+    transition: all 250ms;
+    box-shadow: 0 2px 4px var(--border-color);
+    padding: 2mm;
+    resize: none;
+}
+
+.row * {
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="text"]:active, textarea:focus, textarea:active {
+    background-color: var(--background-color-invert);
+    border-color: var(--border-color-invert);
+    color: var(--color-invert);
+}
+
+img {
+    width: 25%;
+    height: auto;
+}
